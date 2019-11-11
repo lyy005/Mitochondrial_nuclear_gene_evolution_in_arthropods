@@ -15,5 +15,5 @@ d. Gene list for each gene category:
 
 ## step2_Rscripts_for_plotting - r scripts for plotting Figure 1 - 5
 
-##Citation: 
+## Citation: 
 Li Y, GWC Thomas, S Richards, RM Waterhouse, X Zhou, ME Pfrender, 2019, The molecular signature of mitochondrial and nuclear interactions in haplodiploid arthropod genomes

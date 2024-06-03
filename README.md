@@ -1,6 +1,6 @@
 # Mitochondrial_nuclear_gene_evolution_in_arthropods
 
-Sequences and Scripts used in the paper to estimate evolutionary rate and bootstrap analysis
+Sequences and Scripts used in the paper to estimate evolutionary rates and bootstrap analysis
 
 
 ## step1_sequences_and_evolutionary_rate_estimation

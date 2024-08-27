@@ -1,4 +1,4 @@
-# Mitochondrial_nuclear_gene_evolution_in_arthropods
+# Rapid evolution of mitochondrion-related genes in haplodiploid arthropods
 
 Sequences and Scripts used in the paper to estimate evolutionary rates and bootstrap analysis
 

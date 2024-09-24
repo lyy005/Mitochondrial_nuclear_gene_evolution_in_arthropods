@@ -3,6 +3,11 @@
 Sequences and Scripts used in the paper to estimate evolutionary rates and bootstrap analysis
 
 
+## step0_sequences_and_evolutionary_rate_estimation
+
+https://zenodo.org/doi/10.5281/zenodo.13831339
+
+
 ## step1_sequences_and_evolutionary_rate_estimation
 
 a. ./step1_sequences_and_evolutionary_rate_estimation/arthropod_phylogeny.nwk - the phylogeny of 76 arthropod species, which is also available here: https://i5k.gitlab.io/ArthroFam/arthropoda.html

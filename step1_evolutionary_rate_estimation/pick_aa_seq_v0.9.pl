@@ -7,7 +7,7 @@ my $k = $ARGV[1];
 
 
 my %ortho;
-open (ALL, "/afs/crc.nd.edu/group/pfrenderlab/kimura/yli19/projects/OXPHOS_genome/nuclear_aa/arthropoda-ortho-groups.txt") or die "/afs/crc.nd.edu/group/pfrenderlab/kimura/yli19/projects/OXPHOS_genome/nuclear_aa/arthropoda-ortho-groups.txt $!\n";
+open (ALL, "./set0_aa_seq/arthropoda-ortho-groups.txt") or die "./set0_aa_seq/arthropoda-ortho-groups.txt $!\n";
 while(<ALL>){
 	chomp;
 	my @line = split;

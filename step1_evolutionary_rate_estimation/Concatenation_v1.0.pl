@@ -62,4 +62,4 @@ foreach my $k (sort @spp){
 }
 
 close OT;
-print "DONE!";
+print "DONE!\n";

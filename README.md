@@ -7,9 +7,13 @@ Sequences and Scripts used in the paper to estimate evolutionary rates and boots
 
 1. Amino acid sequences of mitochondrial genes can be found under ./step0_sequences/
 
-2. Due to the size limit of GitHub, the other two files can be found here: https://zenodo.org/doi/10.5281/zenodo.13831339 or can be downloaded from https://i5k.gitlab.io/ArthroFam/arthropoda.html
+2. Amino acid sequences of nuclear genes
+
+Due to the size limit of GitHub, the other two files can be found here: https://zenodo.org/doi/10.5281/zenodo.13831339 or can be downloaded from https://i5k.gitlab.io/ArthroFam/arthropoda.html
 arthropoda-seqs-all.zip
 arthropoda-ortho-groups.txt
+
+Download the two files above and unzip arthropoda-seqs-all.zip to ./step0_sequences/nuclear_seq/
 
 
 ## step1_sequences_and_evolutionary_rate_estimation

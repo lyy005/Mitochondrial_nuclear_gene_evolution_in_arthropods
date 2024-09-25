@@ -14,7 +14,7 @@ Due to the size limit of GitHub, the two nuclear gene files (arthropoda-seqs-all
 Download the two files above and unzip arthropoda-seqs-all.zip to ./step0_sequences/nuclear_seq/
 
 
-## step1_sequences_and_evolutionary_rate_estimation
+## step1_evolutionary_rate_estimation
 
 a. ./step1_sequences_and_evolutionary_rate_estimation/arthropod_phylogeny.nwk - the phylogeny of 76 arthropod species, which is also available here: https://i5k.gitlab.io/ArthroFam/arthropoda.html
 

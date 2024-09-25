@@ -1,4 +1,4 @@
-# step 1 - load packages
+# step 1 - load libraries and calculate root-to-tip branch length
 library(phytools)
 library(ggplot2)
 library(gridExtra)
@@ -150,14 +150,14 @@ all_rate_order$controlSingle_rate <- all_rate_order$controlSingle / all_rate_ord
 all_rate_order$control_rate <- all_rate_order$control / all_rate_order$time
 
 # save the table for plotting
-write.table(all_rate_order, file = "./data/evolutionary_rate.random.root2tip.table")
+write.table(all_rate_order, file = "./data/evolutionary_rate.root2tip.table")
 
 # step 2 - plotting
 library(ggplot2)
 library(ggpubr) # ref: https://www.r-bloggers.com/add-p-values-and-significance-levels-to-ggplots/
 
 # this table is already shared in the folder. Or you could generate this again by running the step 1 in this script
-all_rate_order <- read.table("./data/evolutionary_rate.random.root2tip.table")
+all_rate_order <- read.table("./data/evolutionary_rate.root2tip.table")
 
 head(all_rate_order)
 
@@ -344,3 +344,63 @@ plot_grid(p1, p2, p3,
           p7, p8, NULL,
           p4, p5, p6, ncol = 3,  hjust = -1, vjust = -1)
 dev.off() # Close the file
+
+# step 3 - Kruskal Wallis tests
+library(pgirmess)
+
+# this part is the same as the plotting chunk above
+all_rate_order <- read.table("./data/evolutionary_rate.root2tip.table")
+
+all_rate_order$style2 <- factor(all_rate_order$style2, levels=c("Hymenoptera", "Other haplodiploids", "Diploids"))
+
+my_comparisons <- list(c("Hymenoptera", "Diploids"), c("Other haplodiploids", "Diploids"), c("Hymenoptera", "Other haplodiploids"))
+
+
+all_rate_order$style <- as.factor(all_rate_order$style)
+
+# mtOXPHOS
+kruskal.test(mtOXPHOS_rate ~ style2, data=all_rate_order)
+kruskalmc(all_rate_order$mtOXPHOS_rate, all_rate_order$style2, alpha = 0.05)
+kruskalmc(all_rate_order$mtOXPHOS_rate, all_rate_order$style2, alpha = 0.01)
+kruskalmc(all_rate_order$mtOXPHOS_rate, all_rate_order$style2, alpha = 0.001)
+kruskalmc(all_rate_order$mtOXPHOS_rate, all_rate_order$style2, alpha = 0.0001)
+
+# nucOXPHOS
+kruskal.test(nucOXPHOS_rate ~ style2, data=all_rate_order)
+kruskalmc(all_rate_order$nucOXPHOS_rate, all_rate_order$style2, alpha = 0.05)
+kruskalmc(all_rate_order$nucOXPHOS_rate, all_rate_order$style2, alpha = 0.01)
+kruskalmc(all_rate_order$nucOXPHOS_rate, all_rate_order$style2, alpha = 0.001)
+kruskalmc(all_rate_order$nucOXPHOS_rate, all_rate_order$style2, alpha = 0.0001)
+
+# nucOXPHOS without complex2
+kruskal.test(nucOXPHOSN2_rate ~ style2, data=all_rate_order)
+kruskalmc(all_rate_order$nucOXPHOSN2_rate, all_rate_order$style2, alpha = 0.05)
+kruskalmc(all_rate_order$nucOXPHOSN2_rate, all_rate_order$style2, alpha = 0.01)
+kruskalmc(all_rate_order$nucOXPHOSN2_rate, all_rate_order$style2, alpha = 0.001)
+kruskalmc(all_rate_order$nucOXPHOSN2_rate, all_rate_order$style2, alpha = 0.0001)
+
+# nucOXPHOS with complex2 only
+kruskal.test(nucOXPHOS2_rate ~ style2, data=all_rate_order)
+kruskalmc(all_rate_order$nucOXPHOS2_rate, all_rate_order$style2, alpha = 0.05)
+kruskalmc(all_rate_order$nucOXPHOS2_rate, all_rate_order$style2, alpha = 0.01)
+kruskalmc(all_rate_order$nucOXPHOS2_rate, all_rate_order$style2, alpha = 0.001)
+kruskalmc(all_rate_order$nucOXPHOS2_rate, all_rate_order$style2, alpha = 0.0001)
+
+# nucMTRP
+kruskal.test(nucMTRP_rate ~ style2, data=all_rate_order)
+kruskalmc(all_rate_order$nucMTRP_rate, all_rate_order$style2, alpha = 0.05)
+kruskalmc(all_rate_order$nucMTRP_rate, all_rate_order$style2, alpha = 0.01)
+kruskalmc(all_rate_order$nucMTRP_rate, all_rate_order$style2, alpha = 0.001)
+kruskalmc(all_rate_order$nucMTRP_rate, all_rate_order$style2, alpha = 0.0001)
+
+# nucCRP
+kruskal.test(nucCRP_rate ~ style2, data=all_rate_order)
+#kruskalmc(all_rate_order$nucCRP_rate, all_rate_order$style, alpha = 0.05)
+
+# nucControlSinlge
+kruskal.test(controlSingle_rate ~ style2, data=all_rate_order)
+#kruskalmc(all_rate_order$nucControlSingle_rate, all_rate_order$style, alpha = 0.05)
+
+# nucControl_rate
+kruskal.test(control_rate ~ style2, data=all_rate_order)
+#kruskalmc(all_rate_order$nucControl_rate, all_rate_order$style, probs = 0.05)

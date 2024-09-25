@@ -3,7 +3,7 @@ library(ggtree)
 library(ape)
 library(ggrepel)
 
-arthro_tree <- read.nexus("./data/arthropoda3.time.nwk")
+arthro_tree <- read.nexus("./data/set7_arthropoda3.time.nwk")
 
 
 ( p_tree <- rotate(ggtree(arthro_tree), 77) + 
@@ -14,6 +14,6 @@ arthro_tree <- read.nexus("./data/arthropoda3.time.nwk")
   #scale_x_continuous(breaks=seq(0, 600, 100), labels=abs(seq(-600, 0, 100)))
 )
 
-pdf("Figure1.tree.pdf", width = 10, height = 10, useDingbats = FALSE) # Open a new pdf file
+pdf("Figure1.time_tree.pdf", width = 10, height = 10, useDingbats = FALSE) # Open a new pdf file
 p_tree
 dev.off() # Close the file

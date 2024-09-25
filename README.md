@@ -24,7 +24,7 @@ c. Download all the amino acid sequences used in this study can be found here: h
 
 d. Gene list for each gene category: 
 
-## step2_Rscripts_for_plotting - r scripts for plotting Figure 1 - 5
+## step2_Rscripts_for_plotting - r scripts for plotting Figures 1 - 4, Figures S1 - S4
 
 ## step3_subsampling - scripts for subsampling for gene family size
 

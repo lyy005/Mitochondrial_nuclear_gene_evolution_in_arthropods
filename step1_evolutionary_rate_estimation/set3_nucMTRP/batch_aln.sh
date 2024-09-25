@@ -30,4 +30,4 @@ ls *.GBlocks.fas > concatenation.gene.list
 perl ../Concatenation_v1.0.pl concatenation.gene.list concatenation.fasta ../set0_filter_gene_lists/spp.list
 
 # tree building using RAxML with a fixed topology (arthropod_phylogeny.nwk)
-raxmlHPC-PTHREADS -f e -m PROTGAMMAAUTO -s concatenation.fasta -n RAxML_test -T 8 -t ../arthropod_phylogeny.nwk -o TURTI,ISCAP,MOCCI,CSCUL,LRECL,SMIMO,PTEPI,LHESP
+raxmlHPC-PTHREADS -f e -m PROTGAMMAAUTO -s concatenation.fasta -n RAxML_test -T 8 -t ../set0_filter_gene_lists/arthropod_phylogeny.nwk -o TURTI,ISCAP,MOCCI,CSCUL,LRECL,SMIMO,PTEPI,LHESP

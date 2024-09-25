@@ -16,15 +16,11 @@ Download the two files above and unzip arthropoda-seqs-all.zip to ./step0_sequen
 
 ## step1_evolutionary_rate_estimation
 
-a. ./step1_sequences_and_evolutionary_rate_estimation/arthropod_phylogeny.nwk - the phylogeny of 76 arthropod species, which is also available here: https://i5k.gitlab.io/ArthroFam/arthropoda.html
+Detailed instructions can be found ./step1_evolutionary_rate_estimation/README.md
 
-b. ./step1_sequences_and_evolutionary_rate_estimation/spp.list - the list of 76 arthropod species used in this study
+## step2_Rscripts_for_plotting - R scripts for plotting Figures 1 to 4, and Figures S1 to S4
 
-c. Download all the amino acid sequences used in this study can be found here: https://i5k.gitlab.io/ArthroFam/arthropoda.html. Downloaded file names should be EOG8\*.fa. For example: EOG876NF7.fa
-
-d. Gene list for each gene category: 
-
-## step2_Rscripts_for_plotting - r scripts for plotting Figures 1 - 4, Figures S1 - S4
+Detailed instructions can be found ./step2_Rscripts_for_plotting/README.md
 
 ## step3_subsampling - scripts for subsampling for gene family size
 

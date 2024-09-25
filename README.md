@@ -5,6 +5,8 @@ Sequences and Scripts used in the paper to estimate evolutionary rates and boots
 
 ## step0_sequences
 
+This directory contains sequences used in the paper, including:
+
 a. Amino acid sequences of mitochondrial genes can be found under ./step0_sequences/
 
 b. Amino acid sequences of nuclear genes
@@ -16,11 +18,11 @@ Download the two files above and unzip arthropoda-seqs-all.zip to ./step0_sequen
 
 ## step1_evolutionary_rate_estimation
 
-Detailed instructions can be found ./step1_evolutionary_rate_estimation/README.md
+This directory includes scripts used to estimate evolutionary rates. Detailed instructions can be found ./step1_evolutionary_rate_estimation/README.md
 
-## step2_Rscripts_for_plotting - R scripts for plotting Figures 1 to 4, and Figures S1 to S4
+## step2_Rscripts_for_plotting
 
-Detailed instructions can be found ./step2_Rscripts_for_plotting/README.md
+This directory includes R scripts for plotting Figures 1 to 4 and Figures S1 to S4. Detailed instructions can be found ./step2_Rscripts_for_plotting/README.md
 
 ## step3_subsampling - scripts for subsampling for gene family size
 

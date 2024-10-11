@@ -29,4 +29,4 @@ This directory includes R scripts for plotting Figures 1 to 4 and Figures S1 to 
 ## step4_SVM - r script and data for SVM model to detect gene family changes related to haplodiploid species
 
 ## Citation: 
-Li Y, GWC Thomas, S Richards, RM Waterhouse, X Zhou, ME Pfrender, 2019, Rapid evolution of mitochondrion-related genes in haplodiploid arthropods
+Li Y, GWC Thomas, S Richards, RM Waterhouse, X Zhou, ME Pfrender, 2024, Rapid evolution of mitochondrion-related genes in haplodiploid arthropods. BMC Biology. https://doi.org/10.1186/s12915-024-02027-4
